@@ -1,13 +1,40 @@
 import React from 'react'
 
-function Sidebar() {
-    return (
-        <div>
-            <a href = "#." target= "_blank">My Photos</a>
-            <a href = "#." target= "_blank">My Illustrations</a>
-            <a href = "#." target= "_blank">My Paintings</a>
-        </div>
-    )
+import css from './css/NavBarSimple.module.css'
+
+class NavBarSimple extends React.Component{
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            message : 'Hello Guest'
+        };
+    }
+
+
+    handleClick() {
+        this.setState({
+            message: this.state.message === "Hello Guest" ? "Welcome back User" : "Hello Guest",
+            
+            
+        },
+        () => {
+          console.log("new state", this.state.message);
+        }
+      );
+    }
+
+    render() {
+        return (
+            <div className = {css.NavBarSimple} >
+                <h1>My Gallery</h1>
+                <span></span>
+                <button onClick={() => this.handleClick()}>{this.state.message}</button>
+            </div>
+
+        )
+    }
 }
 
-export default Sidebar
+
+export default NavBarSimple
