@@ -1,13 +1,11 @@
-import css from './App.module.css';
-
-import NavBarSimple from './components/Sidebar';
-
+import React from 'react';
+import NavBarForm from './components/NavBarForm';
 
 function App() {
   return (
-    <div className={css.App}>
-      {/* Add your components here */}
-      <NavBarSimple />
+    <div>
+      <h1>My Gallery</h1>
+      <NavBarForm />
     </div>
   );
 }
