@@ -17,7 +17,11 @@ class NavBarForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    // Handle form submission logic here
+    
+    // Toggle the isLoggedIn state
+    this.setState((prevState) => ({
+      isLoggedIn: !prevState.isLoggedIn,
+    }));
   };
 
   render() {
