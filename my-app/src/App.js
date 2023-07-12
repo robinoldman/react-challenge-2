@@ -1,11 +1,11 @@
 import React from 'react';
-import NavBarForm from './components/NavBarForm';
+import Content from './components/Content';
 
 function App() {
   return (
     <div>
       <h1>My Gallery</h1>
-      <NavBarForm />
+      <Content />
     </div>
   );
 }
